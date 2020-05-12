@@ -6,7 +6,7 @@
 **[Mumo Nzinga](https://github.com/mumonzinga)**
 ## Description
 This is an application that helps track wildlife.
-![website review](https://github.com/mumonzinga/Pig-dice-game/blob/master/images/preview.png)
+![website review](https://github.com/mumonzinga/wildlife-service/blob/master/src/main/resources/public/images/wt.png)
 ---
 ## Features
 -None
