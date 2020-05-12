@@ -1,0 +1,94 @@
+{{#partial "content"}}
+
+<div class="container animals-container">
+
+    <div class="animals-left">
+        <div class="animals-table">
+            <div class="card">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Health</th>
+                        <th scope="col">type</th>
+                        <th scope="col">Age</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each animals}}
+                    <tr>
+                        <th scope="row">{{animal.id}}</th>
+                        <td{{animal.name}}</td>
+                        <td>Null</td>
+                        <td>{{animal.TYPE}}</td>
+                        <td>Null</td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each endangeredAnimals}}
+                    <tr>
+                        <th scope="row">{{endangeredAnimal.id}}</th>
+                        <td>{{endangeredAnimal.name}}</td>
+                        <td>{{endangeredAnimal.health}}</td>
+                        <td>{{endangeredAnimal.TYPE}}</td>
+                        <td>{{endangeredAnimal.age}}</td>
+                    </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="animals-right">
+        <div class="sighting-form container">
+            <div class="card">
+                <h1>Add Animal</h1>
+                <form action="/animals/new" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="endangered" name="endangered">
+                        <label class="form-check-label" for="endangered">Endangered?</label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <label for="health">Health</label>
+                            <select class="form-control" name="health" id="health">
+                                <option>healthy</option>
+                                <option>ill</option>
+                                <option>okay</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <label for="age">Age</label>
+                            <select class="form-control" id="age" name="age">
+                                <option>newborn</option>
+                                <option>young</option>
+                                <option>adult</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Add Animal</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{{/partial}}
+
+{{>layout.hbs}}
