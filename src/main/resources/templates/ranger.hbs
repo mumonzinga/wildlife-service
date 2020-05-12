@@ -1,0 +1,49 @@
+{{#partial "content"}}
+<div class="container">
+    <div class="ranger-details">
+        <div class="card">
+            <h1> Ranger Details</h1>
+            <p>{{rangers.lastName}}</p>
+            <p>{{rangers.firstName}} </p>
+            <p>{{rangers.badgeNumber}}</p>
+        </div>
+
+    </div>
+
+    <!--    <div class="ranger-sightings">-->
+    <!--        <div class="card" style="color: black">-->
+    <!--        <h1>My Sightings</h1>-->
+    <!--            <div class="animals-table">-->
+    <!--                <div class="card">-->
+    <!--                    <table class="table">-->
+    <!--                        <thead class="thead-dark">-->
+    <!--                        <tr>-->
+    <!--                            <th scope="col">ID</th>-->
+    <!--                            <th scope="col">Location Id</th>-->
+    <!--                            <th scope="col">Animal Id</th>-->
+    <!--                        </tr>-->
+    <!--                        </thead>-->
+    <!--                        <tbody>-->
+    <!--                        #foreach($sighting in $sightings)-->
+    <!--                        <tr>-->
+    <!--                            <th scope="row">$sighting.getId()</th>-->
+    <!--                            <td>$sighting.getRanger()</td>-->
+    <!--                            <td>$sighting.getAnimal()</td>-->
+    <!--                        </tr>-->
+    <!--                        #end-->
+    <!--                        </tbody>-->
+    <!--                    </table>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+    <!--    </div>-->
+
+    <div>
+        <a class="btn btn-success" href="/ranger/{{rangers.id}}/new"> Record Sighting</a>
+    </div>
+
+</div>
+{{/partial}}
+
+{{>layout.hbs}}
