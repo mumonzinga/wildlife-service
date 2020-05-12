@@ -1,0 +1,44 @@
+{{#partial "content"}}
+    <div class="left-content">
+        <div>
+            <h1> Wildlife</h1>
+            <h4 class="text-uppercase mb-4 white-text animate fadeInDown"><strong id="type"></strong> </h4>
+
+            <p> “The reducing roars of the wild is of testimony of the inhumane brutality of us humans. I now know why it's better being wild than uncivilised” </p>
+
+        </div>
+    </div>
+
+    <div class="right-content">
+        <h1> Rangers </h1>
+        <div class="album py-4 ">
+            <div class="row">
+                {{#each ranger}}
+                    <div class="col-md-4" style=" color: black;">
+                        <div class="card mb-6 box-shadow">
+                            <img class="card-img-top ranger-pic" src="/images/user.jpeg" alt="Card image cap">
+                            <div class="card-body">
+                                {{#with ranger}}
+                                    <h1> {{firstname}} {{lastname}}</h1>
+                                {{/with}}
+                                <h2>{{badgenumber}} </h2>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-success" href="/ranger/{{ranger.id}}">View</a>
+                                    </div>
+                                    <small class="text-muted">Joined 2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+
+
+            </div>
+            <a class="btn btn-add-ranger btn-success" href="/ranger/new">Add New Ranger</a>
+
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
